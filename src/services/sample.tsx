@@ -1,5 +1,5 @@
 export const getData = async (): Promise<any> => {
-  return fetch("https://jsonplaceholder.typicode.com/todos/1", { mode: "cors" })
-    .then(response => response)
+  return fetch("http://localhost:5000/v1/dashboard/summary")
+    .then(response => response.json())
     .then(json => console.log(json));
 };
